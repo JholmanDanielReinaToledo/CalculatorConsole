@@ -2,7 +2,7 @@ package functions
 
 import "fmt"
 
-func Sum() {
+func Subtraction() {
 	var num1, num2 float64
 
 	fmt.Println("Input first number: ")
@@ -11,7 +11,7 @@ func Sum() {
 	fmt.Println("Input second number: ")
 	fmt.Scanln(&num2)
 
-	result := num1 + num2
+	result := num1 - num2
 
 	fmt.Printf("The result is: %.2f \n", result)
 }

@@ -17,16 +17,23 @@ func main() {
 		fmt.Println("_______MENU_______")
 		fmt.Println("Choose your option typing the number")
 		fmt.Println("1. Sum 2 numbers")
+		fmt.Println("2. Subtraction 2 numbers")
 		fmt.Println("99. Exit")
 
 		fmt.Scanln(&option) // read input from user
 
 		switch option {
 		case 1:
-			functions.Suma()
+			functions.Sum()
 			time.Sleep(3 * time.Second)
+
+		case 2:
+			functions.Subtraction()
+			time.Sleep(3 * time.Second)
+
 		case 99:
 			continueBucle = false
+
 		default:
 			fmt.Println("Unknow option")
 		}
