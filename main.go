@@ -18,25 +18,36 @@ func main() {
 		fmt.Println("Choose your option typing the number")
 		fmt.Println("1. Sum 2 numbers")
 		fmt.Println("2. Subtraction 2 numbers")
+		fmt.Println("3. multiply 2 numbers")
+		fmt.Println("4. Divide 2 numbers")
 		fmt.Println("99. Exit")
 
 		fmt.Scanln(&option) // read input from user
 
 		switch option {
 		case 1:
-			functions.Sum()
+			functions.GenericOperation(functions.Sum)
 			time.Sleep(3 * time.Second)
 
 		case 2:
-			functions.Subtraction()
+			functions.GenericOperation(functions.Subtraction)
+			time.Sleep(3 * time.Second)
+
+		case 3:
+			functions.GenericOperation(functions.Multiply)
+			time.Sleep(3 * time.Second)
+
+		case 4:
+			functions.GenericOperation(functions.Divide)
 			time.Sleep(3 * time.Second)
 
 		case 99:
 			continueBucle = false
 
 		default:
-			fmt.Println("Unknow option")
+			fmt.Println("Unknown option")
 		}
 	}
 
+	fmt.Println("BYEEEE")
 }
